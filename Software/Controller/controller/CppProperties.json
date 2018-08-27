@@ -1,0 +1,37 @@
+{
+  "configurations": [
+    {
+      "name": "Visual Micro",
+      "intelliSenseMode": "msvc-x64",
+      "includePath": [
+        "${projectRoot}..\\controller",
+        "C:\\Users\\Julien Di Tria\\Documents\\Arduino\\libraries\\PID_long",
+        "${projectRoot}..\\..\\..\\..\\..\\..\\D_Programmes\\Arduino\\libraries\\Servo\\src",
+        "C:\\Users\\Julien Di Tria\\AppData\\Local\\arduino15\\packages\\arduino\\hardware\\avr\\1.6.21\\libraries\\Wire\\src",
+        "C:\\Users\\Julien Di Tria\\AppData\\Local\\arduino15\\packages\\arduino\\hardware\\avr\\1.6.21\\libraries\\Wire\\src\\utility",
+        "C:\\Users\\Julien Di Tria\\Documents\\Arduino\\libraries\\Timer2",
+        "C:\\Users\\Julien Di Tria\\Documents\\Arduino\\libraries\\PinChangeInt-master",
+        "${projectRoot}..\\..\\..\\..\\..\\..\\D_Programmes\\Arduino\\libraries",
+        "C:\\Users\\Julien Di Tria\\Documents\\Arduino\\libraries",
+        "C:\\Users\\Julien Di Tria\\AppData\\Local\\arduino15\\packages\\arduino\\hardware\\avr\\1.6.21\\libraries",
+        "C:\\Users\\Julien Di Tria\\AppData\\Local\\arduino15\\packages\\arduino\\hardware\\avr\\1.6.21\\cores\\arduino",
+        "C:\\Users\\Julien Di Tria\\AppData\\Local\\arduino15\\packages\\arduino\\hardware\\avr\\1.6.21\\variants\\standard",
+        "C:\\Users\\Julien Di Tria\\AppData\\Local\\arduino15\\packages\\arduino\\tools\\avr-gcc\\4.9.2-atmel3.5.4-arduino2\\avr\\include",
+        "C:\\Users\\Julien Di Tria\\AppData\\Local\\arduino15\\packages\\arduino\\tools\\avr-gcc\\4.9.2-atmel3.5.4-arduino2\\avr\\include\\avr",
+        "C:\\Users\\Julien Di Tria\\AppData\\Local\\arduino15\\packages\\arduino\\tools\\avr-gcc\\4.9.2-atmel3.5.4-arduino2\\lib\\gcc\\avr\\4.8.1\\include",
+        "C:\\Users\\Julien Di Tria\\AppData\\Local\\arduino15\\packages\\arduino\\tools\\avr-gcc\\4.9.2-atmel3.5.4-arduino2\\lib\\gcc\\avr\\4.9.2\\include",
+        "C:\\Users\\Julien Di Tria\\AppData\\Local\\arduino15\\packages\\arduino\\tools\\avr-gcc\\4.9.2-atmel3.5.4-arduino2\\lib\\gcc\\avr\\4.9.3\\include"
+      ],
+      "defines": [
+        "__AVR_ATmega328p__",
+        "__AVR_ATmega328P__",
+        "F_CPU=16000000L",
+        "ARDUINO=10609",
+        "ARDUINO_AVR_UNO",
+        "ARDUINO_ARCH_AVR",
+        "__cplusplus=201103L",
+        "_VMICRO_INTELLISENSE"
+      ]
+    }
+  ]
+}

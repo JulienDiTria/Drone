@@ -1,0 +1,31 @@
+#######################################
+# Syntax Coloring Map For TimerOne
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+TimerTwo                       KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+setPeriod					KEYWORD2
+EnableTimerInterrupt		KEYWORD2
+DisableTimerInterrupt		KEYWORD2
+ResetTimer					KEYWORD2
+ResumeTimer					KEYWORD2
+StopTimer					KEYWORD2
+DisablePWM					KEYWORD2
+AdjustPwmDuty				KEYWORD2
+EnablePWM					KEYWORD2
+PinToDigital				KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+

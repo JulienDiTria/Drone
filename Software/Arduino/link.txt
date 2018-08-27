@@ -1,0 +1,6 @@
+I2C: 
+https://www.arduino.cc/en/Reference/Wire
+
+PinChangeInterrupt:
+https://playground.arduino.cc/Main/PinChangeInt
+https://playground.arduino.cc/Main/PinChangeInterrupt

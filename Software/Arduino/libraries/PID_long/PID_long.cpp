@@ -44,10 +44,6 @@ bool PID::Compute()
 
     // Integral term
     I_term+=((ki*error*dt)/1000);
-	/* Serial.println(ki);
-	Serial.println(error);
-	Serial.println(dt);
-	Serial.println(I_term); */
     if(I_term > outMax) I_term = outMax;
     else if(I_term < outMin) I_term = outMin;
 
@@ -76,7 +72,6 @@ void PID::SetTunings(long Kp, long Ki, long Kd){
 
 void PID::SetOutputLimits(long Min, long Max)
 {
-   Serial.println("PID::SetOutputLimits");
    if(Min >= Max) return;
    outMin = Min;
    outMax = Max;
@@ -87,11 +82,6 @@ void PID::Start(){
 	prevTime = millis();
 }
 
-/* Status Funcions*************************************************************
- * Just because you set the Kp=-1 doesn't mean it actually happened.  these
- * functions query the internal state of the PID.  they're here for display
- * purposes.  this are the functions the PID Front-end uses for example
- ******************************************************************************/
 long PID::GetKp(){ return  kp;}
 long PID::GetKi(){ return  ki;}
 long PID::GetKd(){ return  kd;}

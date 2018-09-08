@@ -43,12 +43,9 @@ PID roll_pid(&roll_meas, &roll_rate_des, &roll_des, Kp, Ki, Kd);
 PID pitch_pid(&pitch_meas, &pitch_rate_des, &pitch_des, Kp, Ki, Kd);
 
 int cnt = 10;
-//String controlLoop_str_debug = "";
-//unsigned long debug_t0[8], debug_t1[8];
 
 // external
 void controlLoop_loop(){
-  //debug_t0[0] = micros();
   
   // outer loop 10 times less often than inner loop
   if(cnt == 10 ){
@@ -60,55 +57,6 @@ void controlLoop_loop(){
   // inner loop
   controlLoop_inner();
   controlLoop_setESCoutputs();
-
-  Serial.println("roll_des \tr_meas \tr_r_des \tr_r_meas \tr_r_ctrl");
-  Serial.print(roll_des);
-  Serial.print("\t\t");
-  Serial.print(roll_meas);
-  Serial.print("\t");
-  Serial.print(roll_rate_des);
-  Serial.print("\t\t");
-  Serial.print(roll_rate_meas);
-  Serial.print("\t\t");
-  Serial.println(roll_rate_control);
-  
-  Serial.println("pitch_des \tp_meas \tp_r_des \tp_r_meas \tp_r_ctrl");
-  Serial.print(pitch_des);
-  Serial.print("\t\t");
-  Serial.print(pitch_meas);
-  Serial.print("\t");
-  Serial.print(pitch_rate_des);
-  Serial.print("\t\t");
-  Serial.print(pitch_rate_meas);
-  Serial.print("\t\t");
-  Serial.println(pitch_rate_control);
-
-  Serial.println("yaw_rate_des \ty_r_meas \ty_r_ctrl");
-  Serial.print(yaw_rate_des);
-  Serial.print("\t\t");
-  Serial.print(yaw_rate_meas);
-  Serial.print("\t\t");
-  Serial.println(yaw_rate_control);
-
-  Serial.println("throttle_des");
-  Serial.println(throttle_des);  
-
-  Serial.println("w1 \tw2 \tw3 \tw4 \tesc1 \tesc2 \tesc3 \tesc4");
-  Serial.print(w1);
-  Serial.print("\t");
-  Serial.print(w2);
-  Serial.print("\t");
-  Serial.print(w3);
-  Serial.print("\t");
-  Serial.print(w4);
-  Serial.print("\t");
-  Serial.print(esc1);
-  Serial.print("\t");
-  Serial.print(esc2);
-  Serial.print("\t");
-  Serial.print(esc3);
-  Serial.print("\t");
-  Serial.println(esc4);
 }
 
 // internal
@@ -119,7 +67,6 @@ void controlLoop_outer(){
   
   roll_pid.Compute();
   pitch_pid.Compute();
-  
 }
 
 // internal

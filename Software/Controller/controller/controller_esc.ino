@@ -6,6 +6,7 @@ Servo esc_motor1, esc_motor2, esc_motor3, esc_motor4;
 
 //internal
 #define ESC_CHARGING 1000
+#define ESC_CHARGED 1500
 
 // internal : motor on pins 6,9,10,11
 #define ESC_PIN_MOT1 9  // bleu
@@ -15,15 +16,12 @@ Servo esc_motor1, esc_motor2, esc_motor3, esc_motor4;
 
 // external
 void esc_setup(){
-  debug_println_str("esc_setup_start");
-  
+
   // attaching the escs on pin ESC_PIN_MOT* to the servo objects
   esc_motor1.attach(ESC_PIN_MOT1);  
   esc_motor2.attach(ESC_PIN_MOT2);
   esc_motor3.attach(ESC_PIN_MOT3);
   esc_motor4.attach(ESC_PIN_MOT4);
-  
-  debug_println_str("esc_setup_mid");
   
   // charging the escs 
   esc_motor1.write(ESC_CHARGING);
@@ -31,7 +29,6 @@ void esc_setup(){
   esc_motor3.write(ESC_CHARGING);
   esc_motor4.write(ESC_CHARGING);
   
-  debug_println_str("esc_setup done");
 }
 
 // external

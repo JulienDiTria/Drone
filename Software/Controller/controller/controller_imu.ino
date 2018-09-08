@@ -26,14 +26,11 @@ String imu_str_debug = "";
 // external
 void IMU_setup(){
   Wire.begin();
-  debug_println_str("IMU_setup start");
-  debug_println_str("IMU_setup acc");
   // Set accelerometers low pass filter at 5Hz
   I2CwriteByte(MPU9250_ADDRESS,29,0x06); // reg 29 = 0x1D = ACCEL_CONFIG2
   // Set gyroscope low pass filter at 5Hz
   I2CwriteByte(MPU9250_ADDRESS,26,0x06); // reg 26 = 0x1A = CONFIG
 
-  debug_println_str("IMU_setup gyro");
   // Configure gyroscope range
   I2CwriteByte(MPU9250_ADDRESS,27,GYRO_FULL_SCALE_1000_DPS); // reg 27 = 0x1B = GYRO_CONFIG
   // Configure accelerometers range
@@ -41,11 +38,9 @@ void IMU_setup(){
   // Set by pass mode for the magnetometers
   I2CwriteByte(MPU9250_ADDRESS,0x37,0x02);
   
-  debug_println_str("IMU_setup mag");
   // Request continuous magnetometer measurements in 16 bits
   I2CwriteByte(MAG_ADDRESS,0x0A,0x16);
   
-  debug_println_str("IMU_setup timer2");
   // Initialize timer1, and set a 125 us period = 8kHz
   //Timer1.initialize(1250);
   // Attach IMU_dataAvailable_callback() as a timer overflow interrupt
@@ -54,8 +49,7 @@ void IMU_setup(){
   Timer2.EnableTimerInterrupt(IMU_callback_newDataAvailable, 125);
 
   IMU_calibration();
-    
-  debug_println_str("imu_setup done");
+
 }
 
 // internal
@@ -81,7 +75,6 @@ void IMU_calibration(){
   roll_calib=1000.*atan2(acc_y, acc_z);  // range 1000*[-pi, +pi] milli radians.
   pitch_calib=1000.*atan2(acc_x, sqrt(acc_y*acc_y+acc_z*acc_z)); // range 1000*[-pi, +pi] milli radians.
 
-  debug_println_str("IMU_calibration done");
 }
 
 // internal
@@ -125,7 +118,6 @@ void IMU_getData(){
     IMU_newDataAvailable = false;
   }
 }
-
 
 // internal
 // This function read Nbytes bytes from I2C device at address Address. 

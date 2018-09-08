@@ -19,7 +19,6 @@ uint8_t latest_interrupted_pin;
 
 // external
 void RX_setup(){
-  debug_println_str("RX_setup start");
   // set the pins for reading interrupts
   pinMode(RX_PIN_1, INPUT); digitalWrite(RX_PIN_1, HIGH);
   pinMode(RX_PIN_2, INPUT); digitalWrite(RX_PIN_2, HIGH);
@@ -33,7 +32,6 @@ void RX_setup(){
   PCintPort::attachInterrupt(RX_PIN_3, &RX_rising, RISING);
   PCintPort::attachInterrupt(RX_PIN_4, &RX_rising, RISING);
   interrupts();             // reenable all interrupts
-  debug_println_str("RX_setup done");
 }
 
 // internal
@@ -65,6 +63,7 @@ void RX_rising()
 }
 
 // internal
+// interrupt routine for rising case of receiver 
 void RX_falling() {
   latest_interrupted_pin=PCintPort::arduinoPin; // get the latest interrupted pin
   switch(latest_interrupted_pin) // switch for that pin to know if it's an RX_PIN_*

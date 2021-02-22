@@ -32,6 +32,8 @@ void RX_setup(){
   PCintPort::attachInterrupt(RX_PIN_3, &RX_rising, RISING);
   PCintPort::attachInterrupt(RX_PIN_4, &RX_rising, RISING);
   interrupts();             // reenable all interrupts
+
+  Serial.println("RX_setup done");
 }
 
 // internal

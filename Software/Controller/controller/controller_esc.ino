@@ -29,6 +29,7 @@ void esc_setup(){
   esc_motor3.write(ESC_CHARGING);
   esc_motor4.write(ESC_CHARGING);
   
+  Serial.println("esc_setup done");
 }
 
 // external

@@ -12,10 +12,10 @@
 #define K_thrust 100
 #define K 1
 
-#define ANGLE_MIN (-45*DEG_TO_RAD) // corresponds to -45 deg
-#define ANGLE_MAX (45*DEG_TO_RAD)  // corresponds to  45 deg
-#define RATE_MIN (-4.5*DEG_TO_RAD)// corresponds to -4.5 deg/s
-#define RATE_MAX (4.5*DEG_TO_RAD)  // corresponds to  4.5 deg/s
+#define ANGLE_MIN (-10*DEG_TO_RAD) // corresponds to -45 deg
+#define ANGLE_MAX (10*DEG_TO_RAD)  // corresponds to  45 deg
+#define RATE_MIN (-5*DEG_TO_RAD)// corresponds to -4.5 deg/s
+#define RATE_MAX (5*DEG_TO_RAD)  // corresponds to  4.5 deg/s
 #define THRUST_MIN 0 // corresponds to 0 cm/s
 #define THRUST_MAX 100  // corresponds to 100 cm/s
 #define W_MIN 1000 // rad/s
@@ -179,4 +179,3 @@ void debug_printTime(){
   controlLoop_str_debug = "IMU_getData " + String(debug_t1[6]);
   debug_println_str(controlLoop_str_debug);
 }
-

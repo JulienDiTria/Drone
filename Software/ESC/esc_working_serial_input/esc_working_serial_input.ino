@@ -5,7 +5,7 @@ Servo servo_motor1;
 int pos=1000;
 
 void setup() {
-  servo_motor1.attach(11);  // attaches the servo on pin 10 to the servo object
+  servo_motor1.attach(9);  // attaches the servo on pin 10 to the servo object
   Serial.begin(9600);
   delay(10);
   servo_motor1.write(pos);

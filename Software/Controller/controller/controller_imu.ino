@@ -49,7 +49,7 @@ void IMU_setup(){
   Timer2.EnableTimerInterrupt(IMU_callback_newDataAvailable, 125);
 
   IMU_calibration();
-
+  Serial.println("IMU_setup done");
 }
 
 // internal
